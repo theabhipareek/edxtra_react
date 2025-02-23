@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaGithub, FaGraduationCap, FaBookOpen, FaPencilAlt, FaUsers, FaRocket } from 'react-icons/fa';
+import { FaGraduationCap, FaBookOpen, FaPencilAlt, FaUsers, FaRocket } from 'react-icons/fa';
 
 const Navbar = () => {
   const [theme, setTheme] = useState('dark');
@@ -29,25 +29,25 @@ const Navbar = () => {
           </div>
           <div className="flex items-center space-x-6">
             <div className="hidden md:flex space-x-8">
-              <a href="#courses" className="flex items-center space-x-2 text-gray-600 hover:text-primary">
+              <a href="#courses" className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors">
                 <FaBookOpen />
                 <span>Courses</span>
               </a>
-              <a href="#exams" className="flex items-center space-x-2 text-gray-600 hover:text-primary">
+              <a href="#exams" className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors">
                 <FaPencilAlt />
                 <span>Exams</span>
               </a>
-              <a href="#community" className="flex items-center space-x-2 text-gray-600 hover:text-primary">
+              <a href="#community" className="flex items-center space-x-2 text-gray-600 hover:text-primary transition-colors">
                 <FaUsers />
                 <span>Community</span>
               </a>
             </div>
-            <label className="theme-switch">
-              <input type="checkbox" checked={theme === 'light'} onChange={toggleTheme} />
-              <span className="theme-slider"></span>
+            <label className="theme-switch relative inline-block w-12 h-6">
+              <input type="checkbox" checked={theme === 'light'} onChange={toggleTheme} className="sr-only" />
+              <span className="theme-slider block w-full h-full rounded-full bg-gray-300 cursor-pointer"></span>
             </label>
-            <button className="bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-full hover:opacity-90">
-              <FaRocket className="mr-2" />Start Learning
+            <button className="bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-full hover:opacity-90 transition-all">
+              <FaRocket className="mr-2" /> Start Learning
             </button>
           </div>
         </div>

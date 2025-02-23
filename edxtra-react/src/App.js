@@ -13,8 +13,6 @@ import Testimonials from './components/Testimonials';
 import WhyChooseEdxtra from './components/WhyChooseEdxtra';
 
 import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect } from 'react';
 
 function App() {
   useEffect(() => {
@@ -24,8 +22,6 @@ function App() {
     });
   }, []);
 
-  // Rest of your App component code
-}
   return (
     <div className="relative">
       <Navbar />
@@ -39,5 +35,6 @@ function App() {
       <WhyChooseEdxtra />
     </div>
   );
+}
 
 export default App;
